@@ -1,0 +1,31 @@
+for(var i=0;i<a.length;i++)
+{
+ (a[i].checked);
+   if(a[i].checked)
+    break;
+   if(i===a.length)
+  {
+    alert("here buddy")
+    
+  }
+  //return alert("No radio button is checked");
+        //alert("nothing");
+    else
+    {
+       document.getElementById("valid-para").style.visibility="visible";
+    }
+  
+   return false;
+  }   
+              var x=document.getElementById("one");
+              var x1=document.getElementById("two");
+              var x2=document.getElementById("three");
+              var x3=document.getElementById("four");
+              
+               
+              if(!(x.checked==false)&&!(x1.checked==false)&&!(x2.checked==false)&&!(x3.checked==false))
+              {
+                   document.getElementById("valid-para").style.visibility="visible";
+                   return false;
+              }
+               -->

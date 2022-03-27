@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Feedback</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Feedback.css">
+
+        <script>
+            function feedbackF1()
+            {
+              
+              var empid=document.getElementById("text-id1");
+              var batchno=document.getElementById("text-id2");
+              var trainername=document.getElementById("text-id3");
+              
+              var q1=document.getElementsByClassName("one");
+              var q2=document.getElementsByClassName("two");
+              var q3=document.getElementsByClassName("three");
+              var q4=document.getElementsByClassName("four");
+              var q5=document.getElementsByClassName("five");
+              var q6=document.getElementsByClassName("six");
+
+              
+              
+             
+              if(empid.value==="")
+                {
+                    document.getElementById("empval").innerHTML="Please Enter Your Employee Id";
+                    document.getElementById("empval").style.visibility="visible";
+                    return false;
+                }
+                 else
+                {
+                   var regx=/[0-9]+/;
+	                 if(!regx.test(empid.value))
+	                 {
+	                  document.getElementById("empval").innerHTML="Invalid Employee Id";
+	                  document.getElementById("empval").style.visibility="visible";
+	                  return false;
+	                 }
+                }
+               
+                 
+                     if(batchno.value==="")
+                      {
+                        document.getElementById("batchval").innerHTML="Please Enter Your Batch No";
+                        document.getElementById("batchval").style.visibility="visible";
+                       return false;
+                      }
+                      else
+                      {
+                        var regx1=/[0-9]+/;
+	                     if(!regx1.test(batchno.value))
+	                    {
+	                      document.getElementById("batchval").innerHTML="Invalid  Batch No";
+	                      document.getElementById("batchval").style.visibility="visible";
+	                      return false;
+                      }
+                       }
+
+
+                       if(trainername.value==="")
+                       {
+                         document.getElementById("trainerval").innerHTML="Please Enter Tariner Name";
+                         document.getElementById("trainerval").style.visibility="visible";
+                         return false;
+                      }
+                      else
+                      {
+                        var regx2=/[A-Za-z]+/;
+	                     if(!regx2.test(trainername.value))
+	                    {
+	                      document.getElementById("trainerval").innerHTML="Invalid Triner Name";
+	                      document.getElementById("trainerval").style.visibility="visible";
+	                      return false;
+                       }
+                      }
+
+
+
+       for(var i=0;i<q1.length;i++)
+        {
+            if(q1[i].checked)
+              break;
+
+           if(i==q1.length-1)
+           {
+            document.getElementById("valid-para").style.display="block";
+            return false;
+           }   
+                
+        }
+        for(var i=0;i<q2.length;i++)
+        {
+            if(q2[i].checked)
+              break;
+
+           if(i==q2.length-1)
+           {
+            document.getElementById("valid-para1").style.display="block";
+            return false;
+           }   
+                
+        }
+        for(var i=0;i<q3.length;i++)
+        {
+            if(q3[i].checked)
+              break;
+
+           if(i==q3.length-1)
+           {
+            document.getElementById("valid-para2").style.display="block";
+            return false;
+           }   
+                
+        }
+        for(var i=0;i<q4.length;i++)
+        {
+            if(q4[i].checked)
+              break;
+
+           if(i==q4.length-1)
+           {
+            document.getElementById("valid-para3").style.display="block";
+            return false;
+           }   
+                
+        }
+        for(var i=0;i<q5.length;i++)
+        {
+            if(q5[i].checked)
+              break;
+
+           if(i==q5.length-1)
+           {
+            document.getElementById("valid-para4").style.display="block";
+            return false;
+           }   
+                
+        }
+        for(var i=0;i<q6.length;i++)
+        {
+            if(q6[i].checked)
+              break;
+
+           if(i==q6.length-1)
+           {
+            document.getElementById("valid-para5").style.display="block";
+            return false;
+           }   
+                
+        }
+      
+                  
+                     }
+                     
+            function click1()
+            {
+              document.getElementById("empval").style.visibility="hidden";
+            }
+            function click2()
+            {
+              document.getElementById("batchval").style.visibility="hidden";
+            }
+            function click3()
+            {
+              document.getElementById("trainerval").style.visibility="hidden";
+            }
+            function ant()
+            {
+              document.getElementById("valid-para").style.display="none";
+            }
+            function boss()
+            {
+              document.getElementById("valid-para1").style.display="none";
+            }
+            function chair()
+            {
+              document.getElementById("valid-para2").style.display="none";
+            }
+            function dog()
+            {
+              document.getElementById("valid-para3").style.display="none";
+            }
+            function estu()
+            {
+              document.getElementById("valid-para4").style.display="none";
+            }
+            
+            function firstu()
+            {
+              document.getElementById("valid-para5").style.display="none";
+            }
+            
+            
+            
+
+
+  
+
+            
+                       
+  
+          </script>
+
+
+      </head>    
+        <body class="feedback-page">
+
+
+		       <form>
+                  <h1 class="f-title">Feedback</h1>
+                 
+                 <div>
+                    <input id="text-id1" class="f-text-box" type="text" onclick="click1()" placeholder="Enter Your Employee Id" ><br>
+                    <label id="empval"> Please Enter your Employee Id</label> <br>
+                    <input id="text-id2" class="f-text-box" type="text" onclick="click2()" placeholder="Enter Your Batch Number" ><br>
+                    <label id="batchval"> Please Enter your Batch Number</label> <br>
+                    <input id="text-id3" class="f-text-box" type="text" onclick="click3()" placeholder="Enter Trainer Name" ><br> 
+                    <label id="trainerval"> Please Enter The Trainer Name</label> <br>
+                  </div>
+                  
+                  
+                  <div>
+
+                    <p>Knowledge in subject </p>
+                    <div class="radio-aligner"><input class="one" onmouseover="ant()"  class="f-radio-btn" type="radio" value="1" name="Knowledge">Poor</div>
+                    <div class="radio-aligner"><input class="one" onmouseover="ant()"  class="f-radio-btn" type="radio" value="2" name="Knowledge">Good</div>
+                    <div class="radio-aligner"><input class="one" onmouseover="ant()"  class="f-radio-btn" type="radio" value="3" name="Knowledge">Very Good</div>
+                    <div class="radio-aligner"><input class="one" onmouseover="ant()"  class="f-radio-btn" type="radio" value="4" name="Knowledge">Excellent</div>
+                    
+                    
+                  </div>
+                  <label id="valid-para">Click any one button</label>
+                  
+
+                  <div>
+                   <p>Quality of Classroom session </p>
+                   <div class="radio-aligner"><input class="two" onmouseover="boss()" class="f-radio-btn" type="radio" value="1" name="quality">Poor</div>
+                   <div class="radio-aligner"><input class="two" onmouseover="boss()" class="f-radio-btn" type="radio" value="2" name="quality">Good</div>
+                   <div class="radio-aligner"><input class="two" onmouseover="boss()" class="f-radio-btn" type="radio" value="3" name="quality" >Very Good</div>
+                   <div class="radio-aligner"><input class="two" onmouseover="boss()" class="f-radio-btn" type="radio" value="4" name="quality" >Excellent</div>
+                  </div>
+                  <label id="valid-para1">Click any one button</label>
+
+                  <div>
+                          <p>Practical session </p>
+                          <div class="radio-aligner"><input class="three" onmouseover="chair()" class="f-radio-btn" type="radio" value="1" name="Practical session">Poor</div>
+                          <div class="radio-aligner"><input class="three" onmouseover="chair()" class="f-radio-btn" type="radio" value="2" name="Practical session">Good</div>
+                          <div class="radio-aligner"><input class="three" onmouseover="chair()" class="f-radio-btn" type="radio" value="3" name="Practical session">Very Good</div>
+                          <div class="radio-aligner"><input class="three" onmouseover="chair()" class="f-radio-btn" type="radio" value="4" name="Practical session">Excellent</div>
+                          <div class="radio-aligner"><input class="three" onmouseover="chair()" class="f-radio-btn" type="radio" value="5" name="Practical session">No Practical Session </div>
+                          </p>
+                        </div>
+                        <label id="valid-para2">Click any one button</label>
+
+                        <div>
+                              <p>Quality of course material shared </p>
+                              <div class="radio-aligner"><input class="four" onmouseover="dog()" class="f-radio-btn" type="radio" value="1" name="course material">Poor</div>
+                              <div class="radio-aligner"><input class="four" onmouseover="dog()" class="f-radio-btn" type="radio" value="2" name="course material">Good</div>
+                              <div class="radio-aligner"><input class="four" onmouseover="dog()" class="f-radio-btn" type="radio" value="3" name="course material">Very Good</div>
+                              <div class="radio-aligner"><input class="four" onmouseover="dog()" class="f-radio-btn" type="radio" value="4" name="course material">Excellent</div>
+                              <div class="radio-aligner"><input class="four" onmouseover="dog()" class="f-radio-btn" type="radio" value="5" name="course material">No Course Material Shared</div>
+                            </div>
+                            <label id="valid-para3">Click any one button</label>
+                            <div>
+                                  <p>Quality of evaluation </p>
+                                  <div class="radio-aligner"><input class="five" onmouseover="estu()" class="f-radio-btn" type="radio" value="1" name="evaluation">Poor</div>
+                                  <div class="radio-aligner"><input class="five" onmouseover="estu()" class="f-radio-btn" type="radio" value="2" name="evaluation">Good</div>
+                                  <div class="radio-aligner"><input class="five" onmouseover="estu()" class="f-radio-btn" type="radio" value="3" name="evaluation">Very Good</div>
+                                  <div class="radio-aligner"><input class="five" onmouseover="estu()" class="f-radio-btn" type="radio" value="4" name="evaluation">Excellent</div>
+                                  <div class="radio-aligner"><input class="five" onmouseover="estu()" class="f-radio-btn" type="radio" value="5" name="evaluation">No Evaluation</div>
+                                </div>
+                                <label id="valid-para4">Click any one button</label>
+                                <div>
+                                      <p>Handling doubts</p>
+                                      <div class="radio-aligner"><input class="six" onmouseover="firstu()" class="f-radio-btn" type="radio" value="1" name="doubt">Poor</div>
+                                      <div class="radio-aligner"><input class="six" onmouseover="firstu()" class="f-radio-btn" type="radio" value="2" name="doubt">Good</div>
+                                      <div class="radio-aligner"><input class="six" onmouseover="firstu()" class="f-radio-btn" type="radio" value="3" name="doubt">Very Good</div>
+                                      <div class="radio-aligner"><input class="six" onmouseover="firstu()" class="f-radio-btn" type="radio" value="4" name="doubt">Excellent</div>
+                                    </div>
+                                    <label id="valid-para5">Click any one button</label>
+                                    <div>
+                                        <p> Recommendations to management ?</p>
+                                        <textarea class="f-textarea" rows="4" cols="50" placeholder="Recommendations"></textarea>
+                                    </div>
+                                    <div>
+                                          <p>Other comments ? </p>
+                                          <textarea class="f-textarea" rows="4" cols="50" placeholder="Other comments"></textarea>
+                                          
+                                      </div>
+                                      <div>
+                                      <button class="f-button" onclick=" return feedbackF1()" >Submit</button><br>
+                                      </div>
+                      </form>
+
+        </body>
+       
+   
+</html>

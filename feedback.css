@@ -1,0 +1,134 @@
+
+  .f-title 
+   {
+    text-align: center;
+    background-color: lightgray;
+    border: solid #5172ff 0.1cm;
+   }
+   .feedback-page 
+   {
+    background-color:#5172ff;
+    font-size:25px;
+   }
+   .f-button
+   {
+       margin:10px;
+       width:130px; 
+       height:50px;
+       margin-left:300px;
+       font-size:25px;
+   }
+   .f-text-box
+   {
+       border-radius:25px;
+       border:2px solid white;
+       height:40px;
+       width:350px;
+       font-size:20px;
+   }
+   .f-textarea
+   {
+       font-size:25px;
+   }
+  .f-radio-btn
+   {
+      margin-left:50px;
+   }
+   p{
+       font-weight: bold;
+   }
+   .radio-aligner
+   {
+       display:inline;
+   }
+   .radio-aligner input
+        {
+            margin-left:10px;
+        }
+   #valid-para,#valid-para1,#valid-para2,#valid-para3,#valid-para4,#valid-para5
+   {
+       color:red;
+       display:none;
+   }
+   
+   #nameval,#batchval,#trainerval
+   {
+       color: red;
+       visibility: hidden;
+   }
+   
+   @media only screen and (max-width: 1000px) 
+
+   {
+    .f-title 
+    {
+     text-align: center;
+     background-color: lightgray;
+     border: solid #5172ff 0.1cm;
+    }
+    .feedback-page 
+    {
+     background-color:#5172ff;
+     font-size:25px;
+    }
+    .f-button
+    {
+        margin:10px;
+        width:130px; 
+        height:50px;
+        margin-left:300px;
+        font-size:25px;
+    }
+    .f-text-box
+    {
+        border-radius:25px;
+        border:2px solid white;
+        height:40px;
+        width:350px;
+        font-size:20px;
+    }
+    .f-textarea
+    {
+        font-size:25px;
+    }
+   .f-radio-btn
+    {
+       margin-left:50px;
+    }
+    p{
+        font-weight: bold;
+    }
+      
+        .radio-aligner
+        {
+            display:block;
+            margin-bottom:10px;
+        }
+        .radio-aligner input
+        {
+            margin-left:10px;
+        }
+        .f-textarea
+        {
+            width: 80%;
+        }
+        .f-button
+        {
+            margin-left: 110px;
+        }
+        #valid-para,#valid-para1,#valid-para2,#valid-para3,#valid-para4,#valid-para5
+        {
+           color:red;
+           display:none;
+        }
+        
+        #nameval,#batchval,#trainerval
+        {
+            color: red;
+            visibility: hidden;
+        }
+        
+   }
+   
+    
+
