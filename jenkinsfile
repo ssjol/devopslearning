@@ -12,9 +12,6 @@ pipeline {
         stage('docker build') {
             steps {
                 echo 'Build and UT'
-                 sh ("mkdir mydoc")
-                     sh ("cp Dockerfile mydoc")
-                     sh ("cd mydoc")
                      sh ("docker build . -t mydoc:1.0")
             }
         }
