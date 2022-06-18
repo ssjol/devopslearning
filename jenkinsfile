@@ -1,0 +1,10 @@
+pipeline{
+stages{
+stage("checkout"){
+//checkout code needs to be written
+}
+stage("docker build"){
+sh 'docker build . -t mydoc:1.0'
+}
+}
+}
