@@ -13,6 +13,7 @@ pipeline {
             steps {
                 echo 'Build and UT'
                      sh ("docker build . -t mydoc:1.0")
+                     sh ("docker run -d --name mydoc1 mydoc:1.0")
             }
         }
        
