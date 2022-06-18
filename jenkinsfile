@@ -1,9 +1,13 @@
 pipeline{
 stages{
 stage("checkout"){
-//checkout code needs to be written
+checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/main']], extensions: [],
+userRemoteConfigs: [[credentialsId: 'fe325150-444b-46da-a418-01749036c55b', url: 'https://github.com/shreedharjolad/devopslearning.git']]]
 }
 stage("docker build"){
+sh 'mkdir mydoc'
+sh 'cp Dockerfile mydoc'
+sh 'cd mydoc'
 sh 'docker build . -t mydoc:1.0'
 }
 }
